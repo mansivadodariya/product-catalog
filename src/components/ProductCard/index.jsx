@@ -14,8 +14,8 @@ const ProductCard = ({ product }) => {
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded">
             <div className="flex space-x-2">
               <span className="w-3 h-3 bg-blue-500 rounded-full animate-bounce [animation-delay:0s]"></span>
-              <span className="w-3 h-3 bg-blue-500 rounded-full animate-bounce [animation-delay:0.2s]"></span>
-              <span className="w-3 h-3 bg-blue-500 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+              <span className="w-3 h-3 bg-pink-500 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+              <span className="w-3 h-3 bg-purple-500 rounded-full animate-bounce [animation-delay:0.4s]"></span>
             </div>
           </div>
         )}
