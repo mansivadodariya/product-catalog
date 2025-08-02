@@ -1,0 +1,15 @@
+export const STRINGS = {
+  PRODUCTS_TITLE: "Product Catalog",
+  PRODUCT_DETAILS: "Product Details",
+  BACK_TO_PRODUCTS: "Back to Products",
+  LOADING: "Loading...",
+  ERROR: "Something went wrong. Please try again later.",
+  CATEGORY: "Category",
+  PRICE: "Price",
+  DESCRIPTION: "Description",
+  SEARCH: "Search",
+  SORT_BY_PRICE: "Sort by Price",
+  SORT_NONE: "None",
+  SORT_LOW_TO_HIGH: "Low to High",
+  SORT_HIGH_TO_LOW: "High to Low",
+};

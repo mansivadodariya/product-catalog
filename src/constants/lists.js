@@ -1,0 +1,5 @@
+import { STRINGS } from "./strings";
+
+export const LABELS = {
+  PRODUCT_ATTRIBUTES: [STRINGS.TITLE, STRINGS.PRICE, STRINGS.CATEGORY],
+};
