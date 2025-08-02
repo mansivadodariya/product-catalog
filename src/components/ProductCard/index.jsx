@@ -11,8 +11,12 @@ const ProductCard = ({ product }) => {
     >
       <div className="relative w-full h-48 mb-3 mt-6">
         {!imageLoaded && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-100 animate-pulse rounded">
-            <div className="w-10 h-10 border-4 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded">
+            <div className="flex space-x-2">
+              <span className="w-3 h-3 bg-blue-500 rounded-full animate-bounce [animation-delay:0s]"></span>
+              <span className="w-3 h-3 bg-blue-500 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+              <span className="w-3 h-3 bg-blue-500 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+            </div>
           </div>
         )}
         <img
