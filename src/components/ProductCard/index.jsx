@@ -1,20 +1,38 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <Link
       to={`/product/${product.id}`}
       className="flex flex-col border rounded-lg duration-200 border-t-cyan-300 border-r-cyan-300 border-b-pink-400 border-l-pink-300 hover:border-purple-500 bg-white p-4 hover:shadow-md transition h-full"
     >
-      <img
-        src={product.image}
-        alt={product.title}
-        className="w-full duration-200 hover:scale-110 h-48 object-contain mb-3 mt-6"
-      />
+      <div className="relative w-full h-48 mb-3 mt-6">
+        {!imageLoaded && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-100 animate-pulse rounded">
+            <div className="w-10 h-10 border-4 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        )}
+        <img
+          src={product.image}
+          alt={product.title}
+          onLoad={() => setImageLoaded(true)}
+          className={`w-full h-full object-contain duration-200 hover:scale-110 transition-transform ${
+            imageLoaded ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      </div>
       <div className="flex flex-col justify-between flex-grow bg-slate-100 p-4 rounded-md">
-        <h2 className="font-bold text-base sm:text-lg mb-4 line-clamp-2 bg-gradient-to-r from-purple-900 to-pink-900 bg-clip-text text-transparent">
-          {product.title}
-        </h2>
+        <div className="relative group">
+          <h2 className="font-bold text-base sm:text-lg mb-4 line-clamp-2 bg-gradient-to-r from-purple-900 to-pink-900 bg-clip-text text-transparent">
+            {product.title}
+          </h2>
+          <div className="absolute z-20 hidden group-hover:block bg-gray-900 text-white text-sm px-3 py-2 rounded shadow-lg w-max max-w-xs border border-gray-300">
+            {product.title}
+          </div>
+        </div>
         <div className="flex flex-wrap justify-between items-center gap-2 mt-auto pt-4 border-t border-gray-200">
           <p className="text-sm px-3 py-1 rounded-md text-white font-thin bg-gradient-to-r from-purple-600 to-blue-600 shadow-md">
             {product.category}
