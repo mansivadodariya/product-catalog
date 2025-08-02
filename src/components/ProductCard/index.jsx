@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
           }`}
         />
       </div>
-      <div className="flex flex-col justify-between flex-grow bg-pink-50 p-4 rounded-md">
+      <div className="flex flex-col justify-between flex-grow bg-slate-100 p-4 rounded-md">
         <div className="relative group">
           <h2 className="font-bold text-base sm:text-lg mb-4 line-clamp-2 bg-gradient-to-r from-purple-900 to-pink-900 bg-clip-text text-transparent">
             {product.title}
