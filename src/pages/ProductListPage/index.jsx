@@ -39,9 +39,11 @@ const ProductListPage = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-tr from-blue-800 via-purple-600 to-pink-500 flex items-center justify-center px-4 py-10">
       <div className="relative z-10 w-full max-w-full p-10 bg-white/40 backdrop-blur-xl border border-white/30 rounded-3xl shadow-xl">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center pb-10 mb-12 border-b-4 border-dashed text-gray-700 tracking-tight">
-          {STRINGS.PRODUCTS_TITLE}
-        </h1>
+        <div className="overflow-visible leading-normal">
+          <h1 className="text-5xl sm:text- font-mono border-b-2 border-dashed mb-10 pb-10 font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-purple-800 to-pink-700 drop-shadow-md sm:drop-shadow-lg md:drop-shadow-xl">
+            {STRINGS.PRODUCTS_TITLE}
+          </h1>
+        </div>
         <ProductFilters
           search={search}
           setSearch={setSearch}

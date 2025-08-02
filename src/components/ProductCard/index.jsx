@@ -13,9 +13,9 @@ const ProductCard = ({ product }) => {
         {!imageLoaded && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded">
             <div className="flex space-x-2">
-              <span className="w-3 h-3 bg-blue-500 rounded-full animate-bounce [animation-delay:0s]"></span>
-              <span className="w-3 h-3 bg-pink-500 rounded-full animate-bounce [animation-delay:0.2s]"></span>
-              <span className="w-3 h-3 bg-purple-500 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+              <span className="w-3 h-3 bg-blue-300 rounded-full animate-bounce [animation-delay:0s]"></span>
+              <span className="w-3 h-3 bg-purple-500 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+              <span className="w-3 h-3 bg-blue-800 rounded-full animate-bounce [animation-delay:0.4s]"></span>
             </div>
           </div>
         )}
@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
           }`}
         />
       </div>
-      <div className="flex flex-col justify-between flex-grow bg-slate-100 p-4 rounded-md">
+      <div className="flex flex-col justify-between flex-grow bg-pink-50 p-4 rounded-md">
         <div className="relative group">
           <h2 className="font-bold text-base sm:text-lg mb-4 line-clamp-2 bg-gradient-to-r from-purple-900 to-pink-900 bg-clip-text text-transparent">
             {product.title}
